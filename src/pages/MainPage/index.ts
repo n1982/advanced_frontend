@@ -1,2 +1,2 @@
 import { MainPageAsync } from "./UI/MainPageAsync";
-export { MainPageAsync as MainPage}
+export { MainPageAsync as MainPage };
