@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import {Suspense} from "react";
 import { useTheme } from "app/providers/ThemeProvider/lib/useTheme";
 import { AppRouter } from "app/providers/router";
 
