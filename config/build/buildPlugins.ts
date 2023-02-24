@@ -1,8 +1,8 @@
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-
-import { BuildOptions } from "./types/config";
+import {BundleAnalyzerPlugin} from "webpack-bundle-analyzer";
+import {BuildOptions} from "./types/config";
 
 export function buildPlugins({
     paths,
@@ -20,8 +20,11 @@ export function buildPlugins({
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-    //   todo подключить React Refresh Webpack Plugin @pmmmwh/react-refresh-webpack-plugin react-refresh
-    //  [webpack-dev-server] "hot: true" automatically applies HMR plugin, you don't have to add it manually to your webpack configuration.
-    // new webpack.HotModuleReplacementPlugin(),
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }),
+        //   todo подключить React Refresh Webpack Plugin @pmmmwh/react-refresh-webpack-plugin react-refresh
+        //  [webpack-dev-server] "hot: true" automatically applies HMR plugin, you don't have to add it manually to your webpack configuration.
+        // new webpack.HotModuleReplacementPlugin(),
     ];
 }
