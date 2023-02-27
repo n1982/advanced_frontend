@@ -1,9 +1,9 @@
 {
   "throw error": "Throw error",
+  "toggle": "toggle",
   "Главная": "Main",
   "О нас": "About",
   "Обновить страницу": "Update page",
-  "Переключить": "Collapse",
   "Произошла непредвиденная ошибка": "unexpected error",
   "Страница не найдена": "Not found page",
   "Язык": "English"

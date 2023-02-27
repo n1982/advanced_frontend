@@ -1,9 +1,12 @@
+// noinspection GrazieInspection
+
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
 
 import path from 'path';
+
 export default {
     clearMocks: true,
     testEnvironment: 'jsdom',
@@ -20,7 +23,7 @@ export default {
     ],
     moduleDirectories: [
         'node_modules',
-        'src'
+        'src',
     ],
     modulePaths: [
         '<rootDir>src',
@@ -46,7 +49,6 @@ export default {
     // cacheDirectory: "C:\\Users\\Селиванов Николай\\AppData\\Local\\Temp\\jest",
 
     // Automatically clear mock calls, instances and results before every test
-
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
@@ -101,7 +103,6 @@ export default {
 
     // An array of file extensions your modules use
 
-
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
 
@@ -137,7 +138,6 @@ export default {
 
     // The root directory that Jest should scan for tests and modules within
 
-
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
     //   "<rootDir>"
@@ -169,7 +169,6 @@ export default {
     // The glob patterns Jest uses to detect test files
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-
 
     // The regexp pattern or array of patterns that Jest uses to detect test files
     // testRegex: [],
