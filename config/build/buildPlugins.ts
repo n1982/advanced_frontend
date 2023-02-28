@@ -8,7 +8,7 @@ export function buildPlugins({
     paths,
     isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
@@ -22,11 +22,16 @@ export function buildPlugins({
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
-        //   todo подключить React Refresh Webpack Plugin @pmmmwh/react-refresh-webpack-plugin react-refresh
+
         //  [webpack-dev-server] "hot: true" automatically applies HMR plugin, you don't have to add it manually to your webpack configuration.
         // new webpack.HotModuleReplacementPlugin(),
     ];
+
+    if (isDev){
+        //   todo подключить React Refresh Webpack Plugin @pmmmwh/react-refresh-webpack-plugin react-refresh
+        plugins.push( new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }),)
+    }
+    return plugins
 }
