@@ -1,29 +1,44 @@
+// noinspection GrazieInspection
+
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
     clearMocks: true,
-    testEnvironment: "jsdom",
-    testPathIgnorePatterns: [
-        "\\\\node_modules\\\\"
-    ],
-    moduleDirectories: [
-        "node_modules"
+    testEnvironment: 'jsdom',
+    coveragePathIgnorePatterns: [
+        '\\\\node_modules\\\\',
     ],
     moduleFileExtensions: [
-        "js",
-        "jsx",
-        "ts",
-        "tsx",
-        "json",
-        "node"
+        'js',
+        'jsx',
+        'ts',
+        'tsx',
+        'json',
+        'node',
+    ],
+    moduleDirectories: [
+        'node_modules',
+        'src',
+    ],
+    modulePaths: [
+        '<rootDir>src',
     ],
     testMatch: [
-        `<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)`
+        // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
+        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
     rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
+
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -34,7 +49,6 @@ export default {
     // cacheDirectory: "C:\\Users\\Селиванов Николай\\AppData\\Local\\Temp\\jest",
 
     // Automatically clear mock calls, instances and results before every test
-
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
@@ -89,7 +103,6 @@ export default {
 
     // An array of file extensions your modules use
 
-
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
 
@@ -125,7 +138,6 @@ export default {
 
     // The root directory that Jest should scan for tests and modules within
 
-
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
     //   "<rootDir>"
@@ -157,7 +169,6 @@ export default {
     // The glob patterns Jest uses to detect test files
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-
 
     // The regexp pattern or array of patterns that Jest uses to detect test files
     // testRegex: [],
