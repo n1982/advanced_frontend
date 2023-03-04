@@ -19,7 +19,7 @@ module.exports = {
             jsx: true,
         },
     },
-    plugins: ['react', '@typescript-eslint', 'i18next'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -29,15 +29,19 @@ module.exports = {
         }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
+        'import/extensions': 'off',
+        'import/no-extraneous-dependencies': 'off',
         'no-unused-vars': 'warn',
+        'no-shadow': 'off',
+        'no-underscore-dangle': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
-        'no-shadow': 'off',
-        'import/extensions': 'off',
-        'import/no-extraneous-dependencies': 'off',
-        'no-underscore-dangle': 'off',
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'warn',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to'],
@@ -51,9 +55,10 @@ module.exports = {
         __IS_DEV__: true,
     },
     overrides: [{
-        files: ['**/src/**/*.test.{ts,tsx}'],
+        files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
         rules: {
             'i18next/no-literal-string': 'off',
+            'max-len': 'off',
         },
     }],
 };
