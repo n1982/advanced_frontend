@@ -34,6 +34,7 @@ module.exports = {
         'no-unused-vars': 'warn',
         'no-shadow': 'off',
         'no-underscore-dangle': 'off',
+        'no-param-reassign': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
