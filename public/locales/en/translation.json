@@ -1,9 +1,18 @@
 {
-  "throw error": "Throw error",
-  "toggle": "toggle",
-  "Короткий язык": "en",
-  "Обновить страницу": "Update page",
-  "Произошла непредвиденная ошибка": "unexpected error",
-  "Страница не найдена": "Not found page",
-  "Язык": "English"
+  "throw error": "throw error",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Войти": "Login",
+  "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+  "Выйти": "Выйти",
+  "Короткий язык": "En",
+  "Обновить страницу": "Reload page",
+  "Перевод": "Translate",
+  "Переключить": "Переключить",
+  "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+  "Страница не найдена": "Page not found",
+  "Тестовый пример": "Test example",
+  "Форма авторизации": "Auth form",
+  "Язык": "English",
+  "новый перевод": "новый перевод"
 }
