@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const { promisify } = require('util');
 const { readdir, writeFile } = require('fs');
 const { join: joinPath, relative } = require('path');

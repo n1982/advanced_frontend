@@ -2,19 +2,17 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import MainPage from './MainPage';
+import AboutPage from './AboutPage';
 
 export default {
-    title: 'pages/MainPage',
-    component: MainPage,
+    title: 'pages/AboutPage',
+    component: AboutPage,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof MainPage>;
-// todo разобраться позже почему ошибка типов в <MainPage {...args} />
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const Template: ComponentStory<typeof MainPage> = (args) => <MainPage {...args} />;
+} as ComponentMeta<typeof AboutPage>;
+
+const Template: ComponentStory<typeof AboutPage> = () => <AboutPage />;
 
 export const Normal = Template.bind({});
 Normal.args = {};

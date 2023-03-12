@@ -1,7 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 
 describe('Button', () => {
     test('Test render', () => {
