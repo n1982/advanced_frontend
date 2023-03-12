@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
     env: {
         browser: true,
@@ -6,16 +7,17 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
-        'airbnb',
+        'plugin:@typescript-eslint/recommended',
         'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
             jsx: true,
         },
-        ecmaVersion: 'latest',
-        sourceType: 'module',
     },
     plugins: [
         'react',
@@ -56,6 +58,9 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies,
         'no-param-reassign': 'off',
         'no-undef': 'off',
+        'react/display-name':'off',
+        '@typescript-eslint/ban-ts-comment':'warn'
+
     },
     globals: {
         __IS_DEV__: true,
