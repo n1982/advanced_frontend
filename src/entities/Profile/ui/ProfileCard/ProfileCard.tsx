@@ -10,7 +10,6 @@ import { Country } from 'entities/Country/model/types/country';
 import { CountrySelect } from 'entities/Country';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
-import avatar from 'shared/assets/tests/storybook.jpg'
 
 interface ProfileCardProps {
     className?: string;
@@ -76,7 +75,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
             <div className={cls.data}>
                 {data?.avatar && (
                     <div className={cls.avatarWrapper}>
-                        <Avatar src={avatar || data?.avatar} />
+                        <Avatar src={data?.avatar} />
                     </div>
                 )}
                 <Input
