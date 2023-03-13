@@ -12,4 +12,3 @@ module.exports = {
         builder: 'webpack5',
     },
 };
-// todo добавить Storybook Addon Themes https://storybook.js.org/addons/@dhruvkb/storybook-addon-themes
