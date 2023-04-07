@@ -19,6 +19,7 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -170,7 +171,7 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://i.ibb.co/DkTDzGV/storybook.jpg"
+      "avatar": "https://i.ibb.co/frD3fR7/png-clipart-youtube-video-graphy-user-profile-avatar-youtube-television-photography.png"
     },
     {
       "id": "2",
