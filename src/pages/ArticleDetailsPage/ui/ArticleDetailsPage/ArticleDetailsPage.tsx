@@ -24,9 +24,6 @@ import cls from './ArticleDetailsPage.module.scss';
 interface ArticleDetailsPageProps {
     className?: string;
 }
-interface ArticleDetailsPageProps {
-    className?: string;
-}
 
 const reducers: ReducersList = {
     articleDetailsComments: articleDetailsCommentsReducer,
