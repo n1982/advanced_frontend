@@ -595,6 +595,12 @@
       "userId": "1",
       "text": "Тестовый комментарий",
       "id": "MeL1xGG"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "test",
+      "id": "jU3Ij3c"
     }
   ],
   "users": [
