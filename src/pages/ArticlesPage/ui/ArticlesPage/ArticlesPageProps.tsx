@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Page } from 'widgets/Page/Page';
-import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Article';
+import { ArticleList } from 'entities/Article';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
+import { articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
 import {
     getArticlesPageError,
     getArticlesPageIsLoading,
@@ -19,7 +19,7 @@ import { initArticlesPage } from '../../model/services/initArticlesPage/initArti
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import cls from './ArticlesPage.module.scss';
 
-interface ArticlesPageProps {
+export interface ArticlesPageProps {
     className?: string;
 }
 

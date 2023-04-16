@@ -27,7 +27,7 @@ import {
 } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import cls from './ArticleDetailsPage.module.scss';
 
-interface ArticleDetailsPageProps {
+export interface ArticleDetailsPageProps {
     className?: string;
 }
 
